@@ -60,6 +60,12 @@ export default function PopularMovies({
       <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {movies?.map((movie, index) => (
           <div className="relative" key={movie.id}>
+            {movie?.adult === true ? (
+              <span className="bg-red-500 text-white  ml-4 p-3 absolute top-0 left-0 z-40 rounded-b-lg">
+                18+
+              </span>
+            ) : null}
+
             <button
               onClick={() => toggleFavorite(movie.id)}
               className="absolute top-0 right-0 z-40 p-2 bg-black/40 rounded-full m-2"
