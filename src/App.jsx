@@ -1,9 +1,11 @@
+import NavBar from "./components/NavBar";
 import PopularMovies from "./components/PopularMovies";
 import Routes from "./Routes";
 
 function App() {
   return (
     <div>
+      <NavBar />
       <Routes />;
       <p className="text-center text-sm text-gray-400 p-5">
         "This website uses TMDB and the TMDB APIs but is not endorsed,
